@@ -1,2 +1,10 @@
 <h1>Posts#new</h1>
 <p>Find me in app/views/posts/new.html.erb</p>
+
+<%= form_for @post do |p| %>
+  <%= p.text_field :make, placeholder: "Make" %>
+  <%= p.text_field :model, placeholder: "Model" %>
+  <%= p.text_field :picture, placeholder: "Picture" %>
+  <%= p.text_field :make, placeholder: "Year" %>
+  <%= p.submit %>
+<% end %>
