@@ -1,0 +1,20 @@
+<h1><%= @user.name %></h1>
+<p>This is my dream car</p>
+
+<ul>
+  <% @user.posts.each do |u| %>
+    <li>Make: <%= u.make %> </li>
+    <li>Model: <%= u.model %> </li>
+    <li>Year: <%= u.year %>
+    <li><img src=" <%= u.picture %> "> </li>
+    <%= link_to 'Add a comment', new_comment_path %>
+
+  <% end  %>
+</ul>
+
+
+
+
+
+
+<%=link_to 'Back to users', users_path %>
