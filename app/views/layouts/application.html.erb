@@ -12,6 +12,8 @@
     <h3>
       <% if logged_in? %>
         <%= link_to 'Logout', logout_path, method: 'delete' %>
+        <%= link_to 'New Post', new_post_path %>
+        <%=link_to 'Back To Users', users_path %>
       <% else %>
         <%= link_to 'Log in', new_session_path %>
       <% end %>

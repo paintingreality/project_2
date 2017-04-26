@@ -1,6 +1,22 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1><%= @post.year %> <%= @post.make %> <%= @post.model %></h1>
 
+<ul>
+<li><%= image_tag @post.picture %></li>
+</ul>
+
+<ul>
 <% @post.comments.each do |c| %>
-<%= c.body %>
+  <li><%= c.body %> - by: <%= c.user.name %></li>
+<% end %>
+</ul>
+
+
+
+<%= form_for([@post, @comment]) do |c| %>
+  <%= c.text_field :body, placeholder: 'Add Comment Here'%>
+  <%= c.submit %>
+  <ul>
+    <li><%= link_to 'Delete Post', post_path(@post), method: 'Delete' %></li>
+    
+  </ul>
 <% end %>

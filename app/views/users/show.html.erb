@@ -2,20 +2,8 @@
 <p>This is my dream car</p>
 
 <ul>
-  <% @user.posts.each do |u| %>
-    <li>Make: <%= u.make %> </li>
-    <li>Model: <%= u.model %> </li>
-    <li>Year: <%= u.year %>
-    <li><img src=" <%= u.picture %> "> </li>
-    <%= link_to 'Add a comment', new_comment_path %>
-    <%= link_to 'Add a new post', new_post_path %>
-
+  <% @user.posts.each do |p| %>
+    <li><%= link_to image_tag(p.picture), post_path(p) %></li>
+    
   <% end  %>
 </ul>
-
-
-
-
-
-
-<%=link_to 'Back to users', users_path %>

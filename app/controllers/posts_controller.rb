@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-
+    @comment = Comment.new
   end
 
   def new
@@ -15,8 +15,9 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
     if @post.save
-      redirect_to post_path
+      redirect_to post_path(@post)
     else
       redirect_to new_post_path
     end
@@ -29,6 +30,10 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      redirect_to user_path(@post.user)
+    end
   end
 
   private

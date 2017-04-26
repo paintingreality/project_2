@@ -10,8 +10,10 @@ Rails.application.routes.draw do
 
 root 'users#index'
 resources :users
-resources :comments
-resources :posts
+
+resources :posts do
+  resources :comments
+end
 
 get '/post/:id/new' => 'post#new'
 
