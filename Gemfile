@@ -5,7 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+#hide enviroment variables
+gem 'dotenv-rails', group: :development, require: 'dotenv/rails-now'
+#photo uploads
+gem 'paperclip'
+gem 'aws-sdk'
 
 ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

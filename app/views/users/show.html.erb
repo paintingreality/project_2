@@ -3,7 +3,8 @@
 
 <ul>
   <% @user.posts.each do |p| %>
-    <li><%= link_to image_tag(p.picture), post_path(p) %></li>
-    
+    <li><%= link_to image_tag(p.cars), post_path(p) %></li>
+
   <% end  %>
+
 </ul>

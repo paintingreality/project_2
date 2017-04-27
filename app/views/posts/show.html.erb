@@ -1,7 +1,7 @@
 <h1><%= @post.year %> <%= @post.make %> <%= @post.model %></h1>
 
 <ul>
-<li><%= image_tag @post.picture %></li>
+<li><%= image_tag @post.cars %></li>
 </ul>
 
 <ul>
@@ -17,6 +17,10 @@
   <%= c.submit %>
   <ul>
     <li><%= link_to 'Delete Post', post_path(@post), method: 'Delete' %></li>
-    
+
   </ul>
+<% end %>
+
+<% if current_user == @post.user %>
+<%= link_to 'Edit Post', edit_post_path %>
 <% end %>

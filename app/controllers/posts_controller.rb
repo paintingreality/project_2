@@ -24,9 +24,17 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
   end
 
   def update
+    @post = Post.find(params[:id])
+    
+    if @post.update_attributes(post_params)
+      redirect_to post_path(@post)
+    else
+      redirect_to edit_post_path(@post)
+    end
   end
 
   def destroy
@@ -38,6 +46,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:make, :model, :picture, :year)
+    params.require(:post).permit(:make, :model, :cars, :year)
   end
 end

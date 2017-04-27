@@ -4,7 +4,7 @@
 <%= form_for @post do |p| %>
   <%= p.text_field :make, placeholder: "Make" %>
   <%= p.text_field :model, placeholder: "Model" %>
-  <%= p.text_field :picture, placeholder: "Picture" %>
-  <%= p.text_field :make, placeholder: "Year" %>
+  <%= p.file_field :cars, placeholder: "Picture" %>
+  <%= p.text_field :year, placeholder: "Year" %>
   <%= p.submit %>
 <% end %>
