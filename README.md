@@ -27,3 +27,4 @@ Secure Password:
 gem 'bcrypt', '~> 3.1.7'
 
 This site is hosted by Heroku at https://dry-peak-80498.herokuapp.com/
+This was spec'd out on https://trello.com/b/YY8nWIPo/project-2
