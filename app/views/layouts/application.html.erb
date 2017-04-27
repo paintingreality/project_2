@@ -8,15 +8,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <h3>
-      <% if logged_in? %>
-        <%= link_to 'Logout', logout_path, method: 'delete' %>
-        <%= link_to 'New Post', new_post_path %>
-        <%=link_to 'Back To Users', users_path %>
-      <% else %>
-        <%= link_to 'Log in', new_session_path %>
-      <% end %>
+  <body class="body">
+
+    <% if logged_in? %>
+      <%= link_to 'Logout', logout_path, method: 'delete' %>
+      <%= link_to 'NewPost', new_post_path %>
+      <%=link_to 'Users', users_path %>
+      
+
+    <% else %>
+      <%= link_to 'Log in', new_session_path %>
+    <% end %>
     </h3>
       <% if flash[:alert] %>
         <div class="alert alert-danger">
@@ -24,5 +26,7 @@
         </div>
       <% end %>
     <%= yield %>
+
+
   </body>
 </html>

@@ -24,6 +24,7 @@ resources :sessions, only: [:new, :create]
 post '/users/:id ' => 'comments#create'
 
 get '/post' => 'post#show'
+
 # get '/comments/new' => 'comments#show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

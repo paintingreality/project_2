@@ -1,4 +1,4 @@
-<h1><%= @post.year %> <%= @post.make %> <%= @post.model %></h1>
+<h1 class="cartitle"><%= @post.year %> <%= @post.make %> <%= @post.model %></h1>
 
 <ul>
 <li><%= image_tag @post.cars %></li>
@@ -6,7 +6,7 @@
 
 <ul>
 <% @post.comments.each do |c| %>
-  <li><%= c.body %> - by: <%= c.user.name %></li>
+  <li class="carcomment"><%= c.body %> - by: <%= c.user.name %></li>
 <% end %>
 </ul>
 
@@ -16,11 +16,11 @@
   <%= c.text_field :body, placeholder: 'Add Comment Here'%>
   <%= c.submit %>
   <ul>
-    <li><%= link_to 'Delete Post', post_path(@post), method: 'Delete' %></li>
+    <% if current_user.id == @post.user_id %>
+    <li><%= link_to 'Delete Post', post_path(@post), method: 'Delete', class: 'deletepost' %></li>
+    <li><%= link_to 'Edit Post', edit_post_path, class: 'editpost' %></li>
+    <li><%= link_to 'Back to Prev Page', user_path(@post.user_id), class: 'backpost' %></li>
+    <% end %>
 
   </ul>
-<% end %>
-
-<% if current_user == @post.user %>
-<%= link_to 'Edit Post', edit_post_path %>
 <% end %>

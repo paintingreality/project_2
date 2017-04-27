@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+.body{
+  background: black;
+}
+
+.indextitle{
+  background: yellow;
+  color: grey;
+  text-align: center;
+}
+
+.userlist{
+  color: grey;
+  font-size: 25px;
+
+}
+
+.userlist:hover{
+  color: yellow;
+}
+
+.usershow{
+  color: yellow;
+  font-size: 50px;
+  text-align: center;
+}
+
+.usershowdream{
+  color: yellow;
+  font-size: 20px;
+  text-align: center;
+}
+
+.cartitle{
+  color: yellow;
+  text-align: center;
+}
+
+.carcomment{
+  color: yellow;
+}
+
+.deletepost{
+  color: yellow;
+}
+
+.deletepost:hover{
+  color: red;
+}
+
+.editpost{
+  color: yellow;
+}
+
+.editpost:hover{
+  color: red;
+}
+
+.backpost{
+  color: yellow;
+}
+
+.backpost:hover{
+  color: green;
+}
+
+.newusers{
+  color: yellow;
+  text-align: center;
+}
+
+.form-group{
+  color: yellow;
+}
+
+.sessionlogin{
+  color: yellow;
+  text-align: center;
+}
+
+.createpost{
+  color: yellow;
+  text-align: center;
+}
+
+.postform{
+  float: left;
+  margin-left: 120px;
+  margin-top: 100px;
+}
+
+.editthispost{
+  color: yellow;
+  text-align: center;
+}
+
+.editform{
+  float: left;
+  margin-left: 120px;
+  margin-top: 100px;
+}

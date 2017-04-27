@@ -1,10 +1,10 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<h1 class="editthispost">Edit This Post</h1>
+<p class="editthispost">Try not to mess it up gearhead!</p>
 
 <%= form_for @post do |p| %>
-  <%= p.text_field :make, placeholder: "Make" %>
-  <%= p.text_field :model, placeholder: "Model" %>
-  <%= p.file_field :cars, placeholder: "Picture" %>
-  <%= p.text_field :year, placeholder: "Year" %>
-  <%= p.submit %>
+  <%= p.text_field :make, placeholder: "Make", class: 'editform' %>
+  <%= p.text_field :model, placeholder: "Model", class: 'editform' %>
+  <%= p.file_field :cars, placeholder: "Picture", class: 'editform' %>
+  <%= p.text_field :year, placeholder: "Year", class: 'editform' %>
+  <%= p.submit class: 'editform'%>
 <% end %>

@@ -1,9 +1,9 @@
-<h1><%= @user.name %></h1>
-<p>This is my dream car</p>
+<h1 class="usershow"><%= @user.name %></h1>
+<p class="usershowdream">Click on picture to see more</p>
 
 <ul>
   <% @user.posts.each do |p| %>
-    <li><%= link_to image_tag(p.cars), post_path(p) %></li>
+    <li><%= link_to image_tag(p.cars), post_path(p)%></li>
 
   <% end  %>
 

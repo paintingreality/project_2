@@ -1,8 +1,8 @@
-<h1>Supercar Members#index</h1>
+<h1 class="indextitle">Supercar Members</h1>
 
 <ul>
 
   <% @users.each do |u| %>
-    <li> <%= link_to u.name, user_path(u.id)%> </li>
+    <li> <%= link_to u.name, user_path(u.id), class: 'userlist'%> </li>
   <% end %>
 </ul>
