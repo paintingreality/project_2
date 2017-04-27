@@ -19,8 +19,9 @@
     <% if current_user.id == @post.user_id %>
     <li><%= link_to 'Delete Post', post_path(@post), method: 'Delete', class: 'deletepost' %></li>
     <li><%= link_to 'Edit Post', edit_post_path, class: 'editpost' %></li>
-    <li><%= link_to 'Back to Prev Page', user_path(@post.user_id), class: 'backpost' %></li>
+
     <% end %>
+    <li><%= link_to 'Back to Prev Page', user_path(@post.user_id), class: 'backpost' %></li>
 
   </ul>
 <% end %>
